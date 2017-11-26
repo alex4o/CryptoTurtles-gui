@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SimpleStorageContract from '../build/contracts/SimpleStorage.json'
 import getWeb3 from './utils/getWeb3'
+import TurtleData from '../build/contracts/TurtleData.json'
 
 
 import {
@@ -60,7 +61,8 @@ class App extends Component {
 		 */
 
 		this.state.web3.eth.getAccounts((error, accounts) => {
-			this.setState({accounts: accounts})
+			let data = this.state.web3.eth.contract(TurtleData.abi).at("0xae45880430125cac96c71e957979fbe311241eff")
+			this.setState({accounts: accounts, data: data})
 		})
 
 		 return 0;
@@ -88,11 +90,19 @@ class App extends Component {
 	}
 
 	render() {
+		let route
+		
+		if(this.state.web3 != null){
+			route = <div>
+				<Route exact path="/" component={(props) => <Home accounts={this.state.accounts} data={this.state.data} /> }/>
+				<Route path="/battle/:id" component={(props) => <Battle data={this.state.data} {...props} /> }/>
+				<Route path="/turtle/:id" component={(props) => <Turtle data={this.state.data} {...props} /> }/>	
+			</div>
+		}
+
 		return (
 			<Router>
 				<div>
-
-
 						<Navbar inverse>
 							<Navbar.Header>
 								<Navbar.Brand>
@@ -103,15 +113,10 @@ class App extends Component {
 								<Nav>
 									<NavItem eventKey={1} href="/battle">Battle</NavItem>
 									<NavItem eventKey={2} href="/turtle">Turtle</NavItem>
-
 								</Nav>
-
 							</Navbar.Collapse>
 						</Navbar>
-
-							<Route exact path="/" component={(props) => <Home accounts={this.state.accounts} /> }/>
-							<Route path="/battle" component={Battle}/>
-							<Route path="/turtle" component={Turtle}/>
+						{route}
 				</div>
 				</Router>
 		);

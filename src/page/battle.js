@@ -25,10 +25,10 @@ export default class Battle extends Component {
 		return (
 			<div id="fight">
 				<div id="turtle_y">
-					<img  src="turtle.png"/>
+					<img  src="/turtle.png"/>
 					<span>name1</span>
 				</div><div id="turtle_e">
-					<img  src="turtle.png"/>
+					<img  src="/turtle.png"/>
 					<span>name2</span>
 				</div>
 

@@ -1357,9 +1357,19 @@
     "1511654545815": {
       "events": {},
       "links": {},
-      "address": "0xbc658e981e40e122b26584c3e9cd251d660fa473"
+      "address": "0xbbca92ee5c00694cddbef32531e7c1c9199173f4"
+    },
+    "1511689038081": {
+      "events": {},
+      "links": {},
+      "address": "0x37e96a6bddbe7829414b8820e0c76f34a306160f"
+    },
+    "1511690720360": {
+      "events": {},
+      "links": {},
+      "address": "0x8cce2cdd320c029e09799b2b351be45df8de377e"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-26T00:03:06.496Z"
+  "updatedAt": "2017-11-26T10:05:36.885Z"
 }
