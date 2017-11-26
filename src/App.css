@@ -1,0 +1,30 @@
+/* PAGE */
+
+#fight {
+
+}
+
+#fight div {
+  
+  width: 50%;
+  display: inline-block;
+}
+
+#fight div img{
+  width: 70%;
+}
+
+#turtle_y {
+  transform: translatey(30vh);
+}
+
+#home ul {
+  // width: 25%;
+  display: inline-block;
+}
+
+#home .turtles {
+  display: inline-block;
+  height: 100vh;
+}
+

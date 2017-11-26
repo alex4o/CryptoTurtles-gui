@@ -1,0 +1,217 @@
+{
+  "contractName": "LimitBalanceMock",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "limitedDeposit",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "limit",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60606040526103e8806000819055505060d78061001d6000396000f3006060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806386f3d0cd14604e578063a4d66daf146056575b600080fd5b6054607c565b005b3415606057600080fd5b606660a5565b6040518082815260200191505060405180910390f35b6000543073ffffffffffffffffffffffffffffffffffffffff16311115151560a357600080fd5b565b600054815600a165627a7a723058205b901d31ec4466356da43efacd43985082fc88735423566b4424fb69a550a4710029",
+  "deployedBytecode": "0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806386f3d0cd14604e578063a4d66daf146056575b600080fd5b6054607c565b005b3415606057600080fd5b606660a5565b6040518082815260200191505060405180910390f35b6000543073ffffffffffffffffffffffffffffffffffffffff16311115151560a357600080fd5b565b600054815600a165627a7a723058205b901d31ec4466356da43efacd43985082fc88735423566b4424fb69a550a4710029",
+  "sourceMap": "105:110:55:-;;;147:4;573:6:10;565:5;:14;;;;521:63;105:110:55;;;;;;",
+  "deployedSourceMap": "105:110:55:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;158:54;;;;;;372:20:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;158:54:55;717:5:10;;701:4;:12;;;:21;;693:30;;;;;;;;158:54:55:o;372:20:10:-;;;;:::o",
+  "source": "pragma solidity ^0.4.11;\n\n\nimport '../../contracts/LimitBalance.sol';\n\n\n// mock class using LimitBalance\ncontract LimitBalanceMock is LimitBalance(1000) {\n\n  function limitedDeposit() payable limitedPayable {\n  }\n\n}\n",
+  "sourcePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/test/helpers/LimitBalanceMock.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/test/helpers/LimitBalanceMock.sol",
+      "exportedSymbols": {
+        "LimitBalanceMock": [
+          4330
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 4319,
+        "name": "PragmaDirective",
+        "src": "0:24:55"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1189,
+          "absolutePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/contracts/LimitBalance.sol",
+          "file": "../../contracts/LimitBalance.sol",
+          "scope": 4331,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 4320,
+        "name": "ImportDirective",
+        "src": "27:42:55"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            1188
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            4330,
+            1188
+          ],
+          "name": "LimitBalanceMock",
+          "scope": 4331
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "LimitBalance",
+                  "referencedDeclaration": 1188,
+                  "type": "contract LimitBalance"
+                },
+                "id": 4321,
+                "name": "UserDefinedTypeName",
+                "src": "134:12:55"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31303030",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1000",
+                  "value": "1000"
+                },
+                "id": 4322,
+                "name": "Literal",
+                "src": "147:4:55"
+              }
+            ],
+            "id": 4323,
+            "name": "InheritanceSpecifier",
+            "src": "134:18:55"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "limitedDeposit",
+              "payable": true,
+              "scope": 4330,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4324,
+                "name": "ParameterList",
+                "src": "181:2:55"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4327,
+                "name": "ParameterList",
+                "src": "207:0:55"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1187,
+                      "type": "modifier ()",
+                      "value": "limitedPayable"
+                    },
+                    "id": 4325,
+                    "name": "Identifier",
+                    "src": "192:14:55"
+                  }
+                ],
+                "id": 4326,
+                "name": "ModifierInvocation",
+                "src": "192:14:55"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4328,
+                "name": "Block",
+                "src": "207:5:55"
+              }
+            ],
+            "id": 4329,
+            "name": "FunctionDefinition",
+            "src": "158:54:55"
+          }
+        ],
+        "id": 4330,
+        "name": "ContractDefinition",
+        "src": "105:110:55"
+      }
+    ],
+    "id": 4331,
+    "name": "SourceUnit",
+    "src": "0:216:55"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-25T22:05:38.954Z"
+}

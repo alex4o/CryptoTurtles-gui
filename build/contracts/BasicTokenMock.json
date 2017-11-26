@@ -1,0 +1,429 @@
+{
+  "contractName": "BasicTokenMock",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "initialAccount",
+          "type": "address"
+        },
+        {
+          "name": "initialBalance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6040516040806104448339810160405280805190602001909190805190602001909190505080600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508060008190555050506103b4806100906000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806318160ddd1461005c57806370a0823114610085578063a9059cbb146100d2575b600080fd5b341561006757600080fd5b61006f61012c565b6040518082815260200191505060405180910390f35b341561009057600080fd5b6100bc600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610132565b6040518082815260200191505060405180910390f35b34156100dd57600080fd5b610112600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061017b565b604051808215151515815260200191505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b60008073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff16141515156101b857600080fd5b61020a82600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461035190919063ffffffff16565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555061029f82600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461036a90919063ffffffff16565b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a36001905092915050565b600082821115151561035f57fe5b818303905092915050565b600080828401905083811015151561037e57fe5b80915050929150505600a165627a7a7230582058802516fb345aaf73dbcf30fd83ad3e442627435e8fcde149c030907e5dc9cf0029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806318160ddd1461005c57806370a0823114610085578063a9059cbb146100d2575b600080fd5b341561006757600080fd5b61006f61012c565b6040518082815260200191505060405180910390f35b341561009057600080fd5b6100bc600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610132565b6040518082815260200191505060405180910390f35b34156100dd57600080fd5b610112600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061017b565b604051808215151515815260200191505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b60008073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff16141515156101b857600080fd5b61020a82600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461035190919063ffffffff16565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555061029f82600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461036a90919063ffffffff16565b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a36001905092915050565b600082821115151561035f57fe5b818303905092915050565b600080828401905083811015151561037e57fe5b80915050929150505600a165627a7a7230582058802516fb345aaf73dbcf30fd83ad3e442627435e8fcde149c030907e5dc9cf0029",
+  "sourceMap": "107:204:46:-;;;150:158;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;255:14;228:8;:24;237:14;228:24;;;;;;;;;;;;;;;:41;;;;289:14;275:11;:28;;;;150:158;;107:204;;;;;;",
+  "deployedSourceMap": "107:204:46:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;179:26:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;968:104:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;438:327;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;179:26:38;;;;:::o;968:104:35:-;1021:15;1051:8;:16;1060:6;1051:16;;;;;;;;;;;;;;;;1044:23;;968:104;;;:::o;438:327::-;494:4;529:1;514:17;;:3;:17;;;;506:26;;;;;;;;625:32;650:6;625:8;:20;634:10;625:20;;;;;;;;;;;;;;;;:24;;:32;;;;:::i;:::-;602:8;:20;611:10;602:20;;;;;;;;;;;;;;;:55;;;;679:25;697:6;679:8;:13;688:3;679:13;;;;;;;;;;;;;;;;:17;;:25;;;;:::i;:::-;663:8;:13;672:3;663:13;;;;;;;;;;;;;;;:41;;;;731:3;710:33;;719:10;710:33;;;736:6;710:33;;;;;;;;;;;;;;;;;;756:4;749:11;;438:327;;;;:::o;562:114:24:-;624:7;651:1;646;:6;;639:14;;;;;;670:1;666;:5;659:12;;562:114;;;;:::o;680:133::-;742:7;757:9;773:1;769;:5;757:17;;792:1;787;:6;;780:14;;;;;;807:1;800:8;;680:133;;;;;:::o",
+  "source": "pragma solidity ^0.4.11;\n\n\nimport '../../contracts/token/BasicToken.sol';\n\n\n// mock class using BasicToken\ncontract BasicTokenMock is BasicToken {\n\n  function BasicTokenMock(address initialAccount, uint256 initialBalance) {\n    balances[initialAccount] = initialBalance;\n    totalSupply = initialBalance;\n  }\n\n}\n",
+  "sourcePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/test/helpers/BasicTokenMock.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/test/helpers/BasicTokenMock.sol",
+      "exportedSymbols": {
+        "BasicTokenMock": [
+          4055
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 4033,
+        "name": "PragmaDirective",
+        "src": "0:24:46"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 2758,
+          "absolutePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/contracts/token/BasicToken.sol",
+          "file": "../../contracts/token/BasicToken.sol",
+          "scope": 4056,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 4034,
+        "name": "ImportDirective",
+        "src": "27:46:46"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            2757,
+            2881
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            4055,
+            2757,
+            2881
+          ],
+          "name": "BasicTokenMock",
+          "scope": 4056
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "BasicToken",
+                  "referencedDeclaration": 2757,
+                  "type": "contract BasicToken"
+                },
+                "id": 4035,
+                "name": "UserDefinedTypeName",
+                "src": "134:10:46"
+              }
+            ],
+            "id": 4036,
+            "name": "InheritanceSpecifier",
+            "src": "134:10:46"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "BasicTokenMock",
+              "payable": false,
+              "scope": 4055,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "initialAccount",
+                      "scope": 4054,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4037,
+                        "name": "ElementaryTypeName",
+                        "src": "174:7:46"
+                      }
+                    ],
+                    "id": 4038,
+                    "name": "VariableDeclaration",
+                    "src": "174:22:46"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "initialBalance",
+                      "scope": 4054,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4039,
+                        "name": "ElementaryTypeName",
+                        "src": "198:7:46"
+                      }
+                    ],
+                    "id": 4040,
+                    "name": "VariableDeclaration",
+                    "src": "198:22:46"
+                  }
+                ],
+                "id": 4041,
+                "name": "ParameterList",
+                "src": "173:48:46"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4042,
+                "name": "ParameterList",
+                "src": "222:0:46"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2693,
+                                  "type": "mapping(address => uint256)",
+                                  "value": "balances"
+                                },
+                                "id": 4043,
+                                "name": "Identifier",
+                                "src": "228:8:46"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4038,
+                                  "type": "address",
+                                  "value": "initialAccount"
+                                },
+                                "id": 4044,
+                                "name": "Identifier",
+                                "src": "237:14:46"
+                              }
+                            ],
+                            "id": 4045,
+                            "name": "IndexAccess",
+                            "src": "228:24:46"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4040,
+                              "type": "uint256",
+                              "value": "initialBalance"
+                            },
+                            "id": 4046,
+                            "name": "Identifier",
+                            "src": "255:14:46"
+                          }
+                        ],
+                        "id": 4047,
+                        "name": "Assignment",
+                        "src": "228:41:46"
+                      }
+                    ],
+                    "id": 4048,
+                    "name": "ExpressionStatement",
+                    "src": "228:41:46"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2856,
+                              "type": "uint256",
+                              "value": "totalSupply"
+                            },
+                            "id": 4049,
+                            "name": "Identifier",
+                            "src": "275:11:46"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4040,
+                              "type": "uint256",
+                              "value": "initialBalance"
+                            },
+                            "id": 4050,
+                            "name": "Identifier",
+                            "src": "289:14:46"
+                          }
+                        ],
+                        "id": 4051,
+                        "name": "Assignment",
+                        "src": "275:28:46"
+                      }
+                    ],
+                    "id": 4052,
+                    "name": "ExpressionStatement",
+                    "src": "275:28:46"
+                  }
+                ],
+                "id": 4053,
+                "name": "Block",
+                "src": "222:86:46"
+              }
+            ],
+            "id": 4054,
+            "name": "FunctionDefinition",
+            "src": "150:158:46"
+          }
+        ],
+        "id": 4055,
+        "name": "ContractDefinition",
+        "src": "107:204:46"
+      }
+    ],
+    "id": 4056,
+    "name": "SourceUnit",
+    "src": "0:312:46"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-25T22:05:38.953Z"
+}

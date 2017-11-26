@@ -1,0 +1,282 @@
+{
+  "contractName": "ReentrancyAttack",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "bytes4"
+        }
+      ],
+      "name": "callSender",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b61013e8061001e6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630a2df1ed14610046575b600080fd5b341561005157600080fd5b61008660048080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916906020019091905050610088565b005b3373ffffffffffffffffffffffffffffffffffffffff16817c010000000000000000000000000000000000000000000000000000000090046040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040160006040518083038160008761646e5a03f192505050151561010f57600080fd5b505600a165627a7a723058206ad4399c8287c49b6074a6b120927a2f5f163b46f2d559f7e0520a6845e18da80029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630a2df1ed14610046575b600080fd5b341561005157600080fd5b61008660048080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916906020019091905050610088565b005b3373ffffffffffffffffffffffffffffffffffffffff16817c010000000000000000000000000000000000000000000000000000000090046040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040160006040518083038160008761646e5a03f192505050151561010f57600080fd5b505600a165627a7a723058206ad4399c8287c49b6074a6b120927a2f5f163b46f2d559f7e0520a6845e18da80029",
+  "sourceMap": "26:124:59:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "26:124:59:-;;;;;;;;;;;;;;;;;;;;;;;;57:90;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;100:10;:15;;116:4;100:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:22;96:47;;;131:5;;;96:47;57:90;:::o",
+  "source": "pragma solidity ^0.4.11;\n\ncontract ReentrancyAttack {\n\n  function callSender(bytes4 data) {\n    if(!msg.sender.call(data)) {\n      throw;\n    }\n  }\n\n}\n",
+  "sourcePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/test/helpers/ReentrancyAttack.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/test/helpers/ReentrancyAttack.sol",
+      "exportedSymbols": {
+        "ReentrancyAttack": [
+          4432
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 4416,
+        "name": "PragmaDirective",
+        "src": "0:24:59"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            4432
+          ],
+          "name": "ReentrancyAttack",
+          "scope": 4433
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "callSender",
+              "payable": false,
+              "scope": 4432,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "data",
+                      "scope": 4431,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes4",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes4",
+                          "type": "bytes4"
+                        },
+                        "id": 4417,
+                        "name": "ElementaryTypeName",
+                        "src": "77:6:59"
+                      }
+                    ],
+                    "id": 4418,
+                    "name": "VariableDeclaration",
+                    "src": "77:11:59"
+                  }
+                ],
+                "id": 4419,
+                "name": "ParameterList",
+                "src": "76:13:59"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4420,
+                "name": "ParameterList",
+                "src": "90:0:59"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "!",
+                          "prefix": true,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bool",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bytes4",
+                                      "typeString": "bytes4"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "call",
+                                  "referencedDeclaration": null,
+                                  "type": "function () payable returns (bool)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sender",
+                                      "referencedDeclaration": null,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 4947,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 4421,
+                                        "name": "Identifier",
+                                        "src": "100:3:59"
+                                      }
+                                    ],
+                                    "id": 4422,
+                                    "name": "MemberAccess",
+                                    "src": "100:10:59"
+                                  }
+                                ],
+                                "id": 4423,
+                                "name": "MemberAccess",
+                                "src": "100:15:59"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4418,
+                                  "type": "bytes4",
+                                  "value": "data"
+                                },
+                                "id": 4424,
+                                "name": "Identifier",
+                                "src": "116:4:59"
+                              }
+                            ],
+                            "id": 4425,
+                            "name": "FunctionCall",
+                            "src": "100:21:59"
+                          }
+                        ],
+                        "id": 4426,
+                        "name": "UnaryOperation",
+                        "src": "99:22:59"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [],
+                            "id": 4427,
+                            "name": "Throw",
+                            "src": "131:5:59"
+                          }
+                        ],
+                        "id": 4428,
+                        "name": "Block",
+                        "src": "123:20:59"
+                      }
+                    ],
+                    "id": 4429,
+                    "name": "IfStatement",
+                    "src": "96:47:59"
+                  }
+                ],
+                "id": 4430,
+                "name": "Block",
+                "src": "90:57:59"
+              }
+            ],
+            "id": 4431,
+            "name": "FunctionDefinition",
+            "src": "57:90:59"
+          }
+        ],
+        "id": 4432,
+        "name": "ContractDefinition",
+        "src": "26:124:59"
+      }
+    ],
+    "id": 4433,
+    "name": "SourceUnit",
+    "src": "0:151:59"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-25T22:05:38.955Z"
+}

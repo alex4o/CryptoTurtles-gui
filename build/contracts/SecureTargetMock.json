@@ -1,0 +1,412 @@
+{
+  "contractName": "SecureTargetMock",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "checkInvariant",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60606040523415600e57600080fd5b60a38061001c6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e79487da146044575b600080fd5b3415604e57600080fd5b6054606e565b604051808215151515815260200191505060405180910390f35b600060019050905600a165627a7a72305820386817a12d4e24f401e853b76e94cf1c895d70f8c4d0e920ee8590cbbdd7c5990029",
+  "deployedBytecode": "0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e79487da146044575b600080fd5b3415604e57600080fd5b6054606e565b604051808215151515815260200191505060405180910390f35b600060019050905600a165627a7a72305820386817a12d4e24f401e853b76e94cf1c895d70f8c4d0e920ee8590cbbdd7c5990029",
+  "sourceMap": "88:104:64:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "88:104:64:-;;;;;;;;;;;;;;;;;;;;;;;;128:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;162:4;181;174:11;;128:62;:::o",
+  "source": "pragma solidity ^0.4.11;\n\n\nimport {Bounty, Target} from \"../../contracts/Bounty.sol\";\n\n\ncontract SecureTargetMock is Target {\n  function checkInvariant() returns(bool) {\n    return true;\n  }\n}\n\ncontract SecureTargetBounty is Bounty {\n  function deployContract() internal returns (address) {\n    return new SecureTargetMock();\n  }\n}\n",
+  "sourcePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/test/helpers/SecureTargetBounty.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/test/helpers/SecureTargetBounty.sol",
+      "exportedSymbols": {
+        "SecureTargetBounty": [
+          4887
+        ],
+        "SecureTargetMock": [
+          4874
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 4860,
+        "name": "PragmaDirective",
+        "src": "0:24:64"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 990,
+          "absolutePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/contracts/Bounty.sol",
+          "file": "../../contracts/Bounty.sol",
+          "scope": 4888,
+          "symbolAliases": [
+            {
+              "foreign": 4861,
+              "local": null
+            },
+            {
+              "foreign": 4862,
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 4863,
+        "name": "ImportDirective",
+        "src": "27:58:64"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            989
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            4874,
+            989
+          ],
+          "name": "SecureTargetMock",
+          "scope": 4888
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Target",
+                  "referencedDeclaration": 989,
+                  "type": "contract Target"
+                },
+                "id": 4864,
+                "name": "UserDefinedTypeName",
+                "src": "117:6:64"
+              }
+            ],
+            "id": 4865,
+            "name": "InheritanceSpecifier",
+            "src": "117:6:64"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "checkInvariant",
+              "payable": false,
+              "scope": 4874,
+              "stateMutability": "nonpayable",
+              "superFunction": 988,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4866,
+                "name": "ParameterList",
+                "src": "151:2:64"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 4873,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 4867,
+                        "name": "ElementaryTypeName",
+                        "src": "162:4:64"
+                      }
+                    ],
+                    "id": 4868,
+                    "name": "VariableDeclaration",
+                    "src": "162:4:64"
+                  }
+                ],
+                "id": 4869,
+                "name": "ParameterList",
+                "src": "161:6:64"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 4869
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 4870,
+                        "name": "Literal",
+                        "src": "181:4:64"
+                      }
+                    ],
+                    "id": 4871,
+                    "name": "Return",
+                    "src": "174:11:64"
+                  }
+                ],
+                "id": 4872,
+                "name": "Block",
+                "src": "168:22:64"
+              }
+            ],
+            "id": 4873,
+            "name": "FunctionDefinition",
+            "src": "128:62:64"
+          }
+        ],
+        "id": 4874,
+        "name": "ContractDefinition",
+        "src": "88:104:64"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            983,
+            1946,
+            2593,
+            2680,
+            4874
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            4887,
+            983,
+            1946,
+            2593,
+            2680
+          ],
+          "name": "SecureTargetBounty",
+          "scope": 4888
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Bounty",
+                  "referencedDeclaration": 983,
+                  "type": "contract Bounty"
+                },
+                "id": 4875,
+                "name": "UserDefinedTypeName",
+                "src": "225:6:64"
+              }
+            ],
+            "id": 4876,
+            "name": "InheritanceSpecifier",
+            "src": "225:6:64"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "deployContract",
+              "payable": false,
+              "scope": 4887,
+              "stateMutability": "nonpayable",
+              "superFunction": 947,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4877,
+                "name": "ParameterList",
+                "src": "259:2:64"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 4886,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4878,
+                        "name": "ElementaryTypeName",
+                        "src": "280:7:64"
+                      }
+                    ],
+                    "id": 4879,
+                    "name": "VariableDeclaration",
+                    "src": "280:7:64"
+                  }
+                ],
+                "id": 4880,
+                "name": "ParameterList",
+                "src": "279:9:64"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 4880
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "contract SecureTargetMock",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "function () returns (contract SecureTargetMock)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "contractScope": null,
+                                  "name": "SecureTargetMock",
+                                  "referencedDeclaration": 4874,
+                                  "type": "contract SecureTargetMock"
+                                },
+                                "id": 4881,
+                                "name": "UserDefinedTypeName",
+                                "src": "306:16:64"
+                              }
+                            ],
+                            "id": 4882,
+                            "name": "NewExpression",
+                            "src": "302:20:64"
+                          }
+                        ],
+                        "id": 4883,
+                        "name": "FunctionCall",
+                        "src": "302:22:64"
+                      }
+                    ],
+                    "id": 4884,
+                    "name": "Return",
+                    "src": "295:29:64"
+                  }
+                ],
+                "id": 4885,
+                "name": "Block",
+                "src": "289:40:64"
+              }
+            ],
+            "id": 4886,
+            "name": "FunctionDefinition",
+            "src": "236:93:64"
+          }
+        ],
+        "id": 4887,
+        "name": "ContractDefinition",
+        "src": "194:137:64"
+      }
+    ],
+    "id": 4888,
+    "name": "SourceUnit",
+    "src": "0:332:64"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-25T22:05:38.957Z"
+}

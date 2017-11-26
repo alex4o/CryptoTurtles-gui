@@ -1,0 +1,329 @@
+{
+  "contractName": "ReentrancyGuard",
+  "abi": [],
+  "bytecode": "0x606060405260008060006101000a81548160ff0219169083151502179055503415602857600080fd5b60358060356000396000f3006060604052600080fd00a165627a7a723058207cb3ba3dee45de2bb8c7ab4d9c6e0a8ed0fbd674fcb06141334a6123dce3d5720029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058207cb3ba3dee45de2bb8c7ab4d9c6e0a8ed0fbd674fcb06141334a6123dce3d5720029",
+  "sourceMap": "222:643:11:-;;;349:5;319:35;;;;;;;;;;;;;;;;;;;;222:643;;;;;;;;;;;;;;",
+  "deployedSourceMap": "222:643:11:-;;;;;",
+  "source": "pragma solidity ^0.4.11;\n\n/**\n * @title Helps contracts guard agains rentrancy attacks.\n * @author Remco Bloemen <remco@2π.com>\n * @notice If you mark a function `nonReentrant`, you should also\n * mark it `external`.\n */\ncontract ReentrancyGuard {\n\n  /**\n   * @dev We use a single lock for the whole contract.\n   */\n  bool private rentrancy_lock = false;\n\n  /**\n   * @dev Prevents a contract from calling itself, directly or indirectly.\n   * @notice If you mark a function `nonReentrant`, you should also\n   * mark it `external`. Calling one nonReentrant function from\n   * another is not supported. Instead, you can implement a\n   * `private` function doing the actual work, and a `external`\n   * wrapper marked as `nonReentrant`.\n   */\n  modifier nonReentrant() {\n    require(!rentrancy_lock);\n    rentrancy_lock = true;\n    _;\n    rentrancy_lock = false;\n  }\n\n}\n",
+  "sourcePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/contracts/ReentrancyGuard.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/alex4o/Projects/CryptoTurtles-gui/contracts/zeppelin-solidity/contracts/ReentrancyGuard.sol",
+      "exportedSymbols": {
+        "ReentrancyGuard": [
+          1211
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 1190,
+        "name": "PragmaDirective",
+        "src": "0:24:11"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "@title Helps contracts guard agains rentrancy attacks.\n@author Remco Bloemen <remco@2π.com>\n@notice If you mark a function `nonReentrant`, you should also\nmark it `external`.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1211
+          ],
+          "name": "ReentrancyGuard",
+          "scope": 1212
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "rentrancy_lock",
+              "scope": 1211,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 1191,
+                "name": "ElementaryTypeName",
+                "src": "319:4:11"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "66616c7365",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "bool",
+                  "type": "bool",
+                  "value": "false"
+                },
+                "id": 1192,
+                "name": "Literal",
+                "src": "349:5:11"
+              }
+            ],
+            "id": 1193,
+            "name": "VariableDeclaration",
+            "src": "319:35:11"
+          },
+          {
+            "attributes": {
+              "name": "nonReentrant",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1194,
+                "name": "ParameterList",
+                "src": "762:2:11"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4950,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 1195,
+                            "name": "Identifier",
+                            "src": "771:7:11"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!",
+                              "prefix": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1193,
+                                  "type": "bool",
+                                  "value": "rentrancy_lock"
+                                },
+                                "id": 1196,
+                                "name": "Identifier",
+                                "src": "780:14:11"
+                              }
+                            ],
+                            "id": 1197,
+                            "name": "UnaryOperation",
+                            "src": "779:15:11"
+                          }
+                        ],
+                        "id": 1198,
+                        "name": "FunctionCall",
+                        "src": "771:24:11"
+                      }
+                    ],
+                    "id": 1199,
+                    "name": "ExpressionStatement",
+                    "src": "771:24:11"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1193,
+                              "type": "bool",
+                              "value": "rentrancy_lock"
+                            },
+                            "id": 1200,
+                            "name": "Identifier",
+                            "src": "801:14:11"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 1201,
+                            "name": "Literal",
+                            "src": "818:4:11"
+                          }
+                        ],
+                        "id": 1202,
+                        "name": "Assignment",
+                        "src": "801:21:11"
+                      }
+                    ],
+                    "id": 1203,
+                    "name": "ExpressionStatement",
+                    "src": "801:21:11"
+                  },
+                  {
+                    "id": 1204,
+                    "name": "PlaceholderStatement",
+                    "src": "828:1:11"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1193,
+                              "type": "bool",
+                              "value": "rentrancy_lock"
+                            },
+                            "id": 1205,
+                            "name": "Identifier",
+                            "src": "835:14:11"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 1206,
+                            "name": "Literal",
+                            "src": "852:5:11"
+                          }
+                        ],
+                        "id": 1207,
+                        "name": "Assignment",
+                        "src": "835:22:11"
+                      }
+                    ],
+                    "id": 1208,
+                    "name": "ExpressionStatement",
+                    "src": "835:22:11"
+                  }
+                ],
+                "id": 1209,
+                "name": "Block",
+                "src": "765:97:11"
+              }
+            ],
+            "id": 1210,
+            "name": "ModifierDefinition",
+            "src": "741:121:11"
+          }
+        ],
+        "id": 1211,
+        "name": "ContractDefinition",
+        "src": "222:643:11"
+      }
+    ],
+    "id": 1212,
+    "name": "SourceUnit",
+    "src": "0:866:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-25T22:05:38.944Z"
+}
